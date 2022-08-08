@@ -1,8 +1,30 @@
-<h1>sos o te haces!2</h1>
-    <tr  *ngFor="let Persona of pers">
-        <img src={{Persona.imgP}} class="img-fluid img-perfil" id="fotodeperfil">
-            <h1>{{Persona.nombreP}} {{Persona.apellidoP}}</h1>
-            <h6>{{Persona.tituloP}}</h6>
-        </tr>
+<div class="container-fluid" *ngFor="let Persona of pers">
+    <!--<div class="row">
+        <div div class="col-12 p-0">
+            <img src={{Persona.imgPortada}} alt="" class="img-portada">       
+        </div>
+    </div> --> 
 
+    <div class="row" >
+        <div class="col-md-4 px-5 py-4 text-center">
+            <img src={{Persona.imgP}} class="img-fluid img-perfil" id="img-perfil">     
+            <h1 class="fw-bold mt-3" id="nombre">{{Persona.nombreP}} {{Persona.apellidoP}}</h1>
+            <h6>{{Persona.tituloP}}</h6>  
+        </div>
 
+        <div class="col-md-7 p-5">
+                <h3 class="fw-bold">Acerca de mí</h3>
+                <p>{{Persona.descP}}</p>       
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="edit-persona-btn text-end" *ngIf="isLogged"> 
+                <button type="button" class="btn btn-dark" routerLink="/editpersona/{{Persona.id}}">
+                    <i class="bi bi-pencil-fill"></i>
+                </button>
+            </div> 
+        </div>
+    </div>
+
+</div>
