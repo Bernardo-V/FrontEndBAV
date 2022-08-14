@@ -2,8 +2,18 @@
     padding: 20px;
 }
 div{
-    background: #c4c4c4;
+    background: #3a8feb;
 }
 h1,h3{
     display: inline;
+}
+.gif{
+    float:left;
+    width:80px;
+    
+}
+.texto{
+    font-size: 35px;
+    font-weight: bold;
+    color:black;
 }

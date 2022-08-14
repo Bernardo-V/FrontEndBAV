@@ -1,12 +1,12 @@
 <div class="row">
-    <img src="../../../assets/diploma.gif" alt="experiencia laboral" height="auto" width="80" class="text-center text-md-start" style="max-width: 80px;"/>
-    <h1>Educación</h1>
 
+    <p class="texto">
+    <img src="../../../assets/diploma.gif" align="right" class="gif">
+        Educación
+    </p>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark add-button" routerLink="/nuevaedu" *ngIf="isLogged"><h3><i class="bi bi-plus"></i></h3></button>
+        <button type="button" class="btn btn-dark add-button" routerLink="/nuevaedu" *ngIf="isLogged"><h3><i class="bi bi-plus"></i></h3>Agregar Educación</button>
     </div>
-   
-
     <div class="col lg 1"></div>
     <div class="col-lg-11">
         <table class="table">
@@ -22,11 +22,11 @@
                         <h4>{{Educacion.fechaEdu}}</h4>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light edit-button" routerLink="/editedu/{{Educacion.id}}">
+                        <button class="btn btn-light edit-button" routerLink="/editedu/{{Educacion.id}}" Title="Editar">
                             <i class="bi bi-pencil-fill"></i> </button>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-danger delete-button" (click)="delete(Educacion.id)">
+                        <button class="btn btn-danger delete-button" (click)="delete(Educacion.id)" Title="Eliminar">
                             <i class="bi bi-trash-fill"></i></button>
 
                     </td>
